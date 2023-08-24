@@ -1,0 +1,41 @@
+// Nguyen Thien Nhan (Revolution)
+#include <bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define lwb lower_bound
+#define upb upper_bound
+#define fi first
+#define se second
+using namespace std;
+const ll MAXN = 1e6 + 5;
+const ll INF = 1e15;
+
+ll a[MAXN];
+
+ll n, tmp;
+
+void solve() {
+	
+	cin >> n;
+	for ( ll i = 1; i <= n; i++ ) {
+		cin >> a[i];
+		if ( a[i] % 2 != 0 ) tmp++;
+	}
+	
+	if ( tmp % 2 == 0 ) cout << "YES";
+	else cout << "NO";
+}
+
+
+
+int main() {
+	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+   	//freopen (".INP","r", stdin);
+	//freopen (".OUT","w", stdout);
+	
+	solve();
+
+	return 0;
+}
+
+
