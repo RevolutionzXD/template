@@ -53,9 +53,9 @@ void init(int u) {
 int lca(int u, int v) {
 	if (height[u] != height[v]) {
 		if (height[u] < height[v]) swap(u, v);
-		int tmp = height[u] - height[v];
-		for (int i = 0; MASK(i) <= tmp; ++i) {
-			if (BIT(tmp, i)) u = up[u][i];
+		int diff = height[u] - height[v];
+		for (int i = 0; MASK(i) <= diff; ++i) {
+			if (BIT(diff, i)) u = up[u][i];
 		}
 	}
 	if (u == v) return u;
